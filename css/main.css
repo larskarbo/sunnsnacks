@@ -1,0 +1,96 @@
+
+
+body {
+    padding-bottom: 20px;
+}
+
+.container {
+}
+
+.part {
+	max-width: 750px;
+	margin-bottom: 40px;
+}
+
+#hero {
+	background: url(/sunnsnacks/img/resize/sunn1.jpg) center center /*fixed*/ #2B7369;
+	background-size: cover;
+	height:400px;
+}
+
+#folk {
+	background: url(/sunnsnacks/img/resize/folk.jpg) center center /*fixed*/ #2B7369;
+	background-size: cover;
+	height:400px;
+}
+
+#logo {
+	width: 100%;
+	max-width: 400px;
+	margin: auto;
+	display: block;
+	margin-top: 20px;
+}
+
+h1.hero {
+	text-align: center;
+	font-size: 30px;
+	color: black
+}
+
+h2 {
+	text-transform: uppercase;
+	text-align: center;
+	font-weight: bold;
+	color: rgba(0,0,0,0.6);
+	margin: 25px auto;
+}
+
+.filter {
+	width: 100%;
+	height: 100%;
+	opacity: 0.85;
+}
+
+.filter-green {
+	background-color: green;
+}
+
+#header {
+	padding-bottom: 15px;
+}
+
+.descriptive {
+	width: 100%;
+}
+
+/* nav */
+
+.navigasjon{
+    list-style:none;
+    margin:0;
+    padding:0;
+    text-align:center;
+}
+.navigasjon li{
+    display:inline;
+}
+.navigasjon a{
+    display:inline-block;
+    padding:10px;
+}
+
+/* links */
+
+a:link, a:visited{
+	color: #2FA308;
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+a:active {
+	color:#165202;
+}
