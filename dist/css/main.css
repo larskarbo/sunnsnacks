@@ -1,0 +1,292 @@
+/*
+
+TODO with sass?
+@media (max-width: 320px) { 
+    ... background-image(imageURLforPhones.png); ...
+}
+@media (min-width:501px) and (max-width: 1024px) {
+    ... background-image(imageURLforTablets.png); ...
+}
+@media (min-width: 1025px) { 
+    ... background-image(imageURLforLargeScreens.png); ...
+}
+*/
+
+body {
+    font-size: 15px;
+    font-family: 'Abel', sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+h2, h1.hero, .focus {
+  font-family: 'Montaga', sans-serif;
+  font-weight: normal;
+}
+
+h3 {
+	text-align: center;
+}
+
+img {
+	width: 100%;
+}
+
+.byline {
+	text-align: center;
+	font-size: 20px;
+	font-weight: bold;
+	color: gray;
+}
+
+.line {
+	border-top: 1px dashed #D1D1D1;
+}
+
+.part {
+	max-width: 750px;
+	margin-bottom: 40px;
+}
+
+p.focus {
+	text-align: center;
+	padding:0 20%;
+	font-size: 20px;
+}
+
+#hero {
+	background: url(/img/sunn1.jpg?w=1600) center center /*fixed*/ #2B7369;
+	background-size: cover;
+	height:400px;
+}
+
+.between {
+	background-size: cover;
+	background: center center fixed;
+	height: 200px;
+	padding: 0;
+}
+
+.popup-outer{
+	position: absolute;
+	left: 0;
+	right: 0;
+	top: 0;
+	bottom: 0;
+	cursor: default;
+	z-index:5;
+}
+.popup {
+	position: absolute;
+	top: 20%;
+	max-width: 400px;
+	z-index: 10;
+	background-color: white;
+	padding: 20px;
+	left: 0;
+	right: 0;
+	margin:0 auto;
+	border: solid 1px gray;
+	text-align: center;
+}
+
+#bet1 {
+	background-image: url(/img/bord.jpg);
+}
+
+#folk {
+	background: url(/img/folk.jpg) center center /*fixed*/ #2B7369;
+	background-size: cover;
+	height:400px;
+}
+
+#logo {
+	width: 100%;
+	max-width: 400px;
+	margin: auto;
+	display: block;
+	margin-top: 20px;
+	transition: -webkit-filter 1s ease-out;
+}
+#logo:hover {
+	transition: -webkit-filter 2s ease-in-out;
+	-webkit-filter: hue-rotate(-70deg);
+}
+#slogan {
+	position: relative;
+	animation: show-fade-move 3s 1 ease-in-out;
+}
+
+@keyframes show-fade-move {
+  0%   {
+  	opacity: 0;
+  	top:40px;
+  }
+  100% {
+  	top:0px;
+  	opacity: 1;
+  }
+}
+
+
+h1.hero {
+	text-align: center;
+	font-size: 30px;
+	color: black
+}
+
+h2 {
+	text-transform: uppercase;
+	text-align: center;
+	font-weight: bold;
+	color: rgba(0,0,0,0.8);
+	margin: 25px auto;
+}
+
+.filter {
+	width: 100%;
+	height: 100%;
+	opacity: 0.55;
+}
+
+.filter-green {
+	background-color: green;
+}
+
+.filter-orange {
+	background-color: orange;
+}
+
+#header {
+	padding-bottom: 15px;
+}
+
+.descriptive {
+	width: 100%;
+}
+
+.none {
+	display: none;
+}
+
+.invisible {
+	opacity: 0;
+}
+
+#map {
+	width: 100%;
+	height: 300px;
+	overflow: hidden;
+}
+
+#map > img {
+	position: relative;
+
+}
+
+#close {
+	display: none
+}
+
+#maptext {
+	position: absolute;
+	top:50%;
+	left: 50%;
+	width: 0px;
+	margin-top: -61px;
+	margin-left: -20px;
+	overflow: hidden;
+	height: 100px;
+}
+
+
+/* nav */
+
+.navigasjon{
+    list-style:none;
+    margin:0;
+    padding:0;
+    text-align:center;
+}
+.navigasjon li{
+    display:inline;
+}
+.navigasjon a{
+    display:inline-block;
+    padding:10px;
+}
+
+/* links */
+
+a:link, a:visited{
+	color: #2FA308;
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+a:active {
+	color:#165202;
+}
+
+#produktSlider {
+	height: auto;
+}
+
+#produktSlider.contentSlider {
+	height: 200px;
+}
+
+@media (max-width: 750px){
+	#produktSlider.contentSlider {
+		height: 400px;
+	}
+}
+
+.middle {
+
+}
+
+.textCenter {
+	text-align: center;
+}
+
+
+/*  LAWS FORM  */
+
+.lars {
+	margin-bottom: 25px;
+}
+
+.lars label {
+	display: block;
+	font-weight: normal;
+	margin: 0;
+}
+.lars input {
+	line-height: 1.5
+}
+.lars input, .lars textarea {
+	width: 100%;
+	font-family: 'Belleza', sans-serif;
+	font-size: 15px;
+	margin-bottom: 15px;
+}
+.lars button {
+	text-align: center;
+	margin: auto;
+	display: block;
+	background: #eaeaea;
+	font-size: 19px;
+	padding:5px 9px;
+	text-transform: uppercase;
+}
+.lars button:active {
+	background: #A1D490;
+}
+
+.lars .questions.loading {
+	opacity: 0.5;
+}
