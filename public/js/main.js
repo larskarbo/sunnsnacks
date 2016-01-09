@@ -1,37 +1,52 @@
 
 
- $(document).ready(function(){
+$(document).ready(function(){
 
- 	function checkAppear(){
+	$('#skjema').submit(function(e){
+		e.preventDefault();
 
- 		var scroll = $(window).scrollTop() + window.innerHeight;
- 		var map = $('#map').offset().top + $('#map').height();
+		$('#skjema .questions').addClass('loading');
 
- 		if(scroll >= map){
+		i = 0;
+		$('#skjema button').html("Sender");
+		var interval = setInterval(function() {
+			i = ++i % 4;
+			$('#skjema button').html("Sender"+Array(i+1).join("."));
+		}, 750);
 
- 			mapAppeared();
+		$.post('send-mail',$('#skjema').serialize(),function(response){
+			console.log('successfully posted request: ' + response);
+			finished();
+		});
 
- 			$(document).off('scroll', checkAppear); // delete event listener
- 		}
- 	}
+		setTimeout(function() {finished();}, 3000);
 
- 	$(document).on('scroll', checkAppear);
+		function finished(){
+			clearInterval(interval);
+			$('#skjema .questions').removeClass('loading');
+			$('#skjema').find('*').val('');
+			$('#skjema button').html('Send');
+			$('#skjema .message').html('Melding sendt');
+		}
+	})
 
 
- 	function mapAppeared(){
- 		var waitDuration = 7000;
+	slider.init($('#slider'), {
+		arrows: true,
+		autoplay: false,
+		pauseOnHover: false
+	});
 
- 		// map.zoomTo(7, {
- 		// 	duration: waitDuration
- 		// });
+	mapControl.init('map')
 
- 		setTimeout(function(){
- 			console.log('yeyeye')
- 			$("#maptext").animate({
- 				width: '200px'
- 			}, 3000)
- 		}, (waitDuration-1000))
+	if($(window).width() > 480){
 
- 	}
+		slider.init($('#produktSlider'), {
+			arrows: true,
+			autoplay: false
+		});
+	};
 
- });
+
+
+});

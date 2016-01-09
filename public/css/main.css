@@ -1,10 +1,22 @@
+/*
+
+TODO with sass?
+@media (max-width: 320px) { 
+    ... background-image(imageURLforPhones.png); ...
+}
+@media (min-width:501px) and (max-width: 1024px) {
+    ... background-image(imageURLforTablets.png); ...
+}
+@media (min-width: 1025px) { 
+    ... background-image(imageURLforLargeScreens.png); ...
+}
+*/
+
 body {
-    padding-bottom: 100px;
     font-size: 15px;
     font-family: 'Abel', sans-serif;
     margin: 0;
     padding: 0;
-    padding-bottom: 150px;
 }
 
 h2, h1.hero, .focus {
@@ -12,8 +24,12 @@ h2, h1.hero, .focus {
   font-weight: normal;
 }
 
-h3{
+h3 {
 	text-align: center;
+}
+
+img {
+	width: 100%;
 }
 
 .byline {
@@ -39,7 +55,7 @@ p.focus {
 }
 
 #hero {
-	background: url(/img/sunn1.jpg) center center /*fixed*/ #2B7369;
+	background: url(/img/sunn1.jpg?w=1600) center center /*fixed*/ #2B7369;
 	background-size: cover;
 	height:400px;
 }
@@ -123,7 +139,7 @@ h2 {
 	text-transform: uppercase;
 	text-align: center;
 	font-weight: bold;
-	color: rgba(0,0,0,0.6);
+	color: rgba(0,0,0,0.8);
 	margin: 25px auto;
 }
 
@@ -213,4 +229,64 @@ a:hover {
 
 a:active {
 	color:#165202;
+}
+
+#produktSlider {
+	height: auto;
+}
+
+#produktSlider.contentSlider {
+	height: 200px;
+}
+
+@media (max-width: 750px){
+	#produktSlider.contentSlider {
+		height: 400px;
+	}
+}
+
+.middle {
+
+}
+
+.textCenter {
+	text-align: center;
+}
+
+
+/*  LAWS FORM  */
+
+.lars {
+	margin-bottom: 25px;
+}
+
+.lars label {
+	display: block;
+	font-weight: normal;
+	margin: 0;
+}
+.lars input {
+	line-height: 1.5
+}
+.lars input, .lars textarea {
+	width: 100%;
+	font-family: 'Belleza', sans-serif;
+	font-size: 15px;
+	margin-bottom: 15px;
+}
+.lars button {
+	text-align: center;
+	margin: auto;
+	display: block;
+	background: #eaeaea;
+	font-size: 19px;
+	padding:5px 9px;
+	text-transform: uppercase;
+}
+.lars button:active {
+	background: #A1D490;
+}
+
+.lars .questions.loading {
+	opacity: 0.5;
 }

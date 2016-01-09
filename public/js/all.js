@@ -13,11 +13,22 @@
 
  	$('#mainNav').find('a[href*=#]').on('click', function(event){     
  		event.preventDefault();
- 		if(this.hash.length > 0){
- 			$('html,body').animate({scrollTop:$(this.hash).offset().top}, 1984, 'easeOutQuart', function(){
+ 		var $page;
 
- 			});
+ 		if(this.hash.length == 0)
+ 			return;
+ 		
+ 		if ( self !== top ) {
+ 			// you're in an iframe
+ 			$page = $(window.parent.document).find('html,body');
+ 		}else{
+ 			// normal
+ 			$page = $('html,body');
  		}
+ 		
+
+		$page.animate({scrollTop:$(this.hash).offset().top}, 1000, 'easeOutQuart');
+ 		
  	});
 
 

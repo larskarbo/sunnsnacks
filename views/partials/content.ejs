@@ -4,90 +4,39 @@
 
 	<ul class="navigasjon" id="mainNav">
 		<li><a href="#hjem">Hjem</a></li>
+		<li><a href="#prosessen">Prosessen</a></li>
 		<li><a href="#produkter">Produkter</a></li>
 		<li><a href="#omoss">Om oss</a></li>
 		<li><a href="#kontakt">Kontakt</a></li>
 	</ul>
 </div>
 
+
 <div class="container-fluid uc-bg" id="hero">
 	<div>
-		<h1 class="hero uc" id="slogan"><?= slagord ?></h1>
-		<!-- <p>Hest er best som pålegg. Sunn snacks er best til alt</p> -->
+		<h1 class="hero uc" data-uc="slagord" id="slogan"><?= slagord ?></h1>
 	</div>
 </div>
 
+<?- include ../partials/prosessen.ejs ?>
 
-<div class="container part" id="produkter">
-	<h2 class="uc">Produkter</h2>
-	<div class="uc" data-uc="produkter">
-		<p>Vi har utviklet en sunn grønnsakssnacks. Snacksen er produsert av de beste råvarene og kan nytes med god samvittighet. Den blir å finne på REMA 1000 på Stranda.</p>
-	</div>
 
+
+<div class="container-fluid between uc-bg" id="bet1">
+	<div class="filter"></div>
 </div>
-<!-- <p class="focus">Vi har utviklet en sunn grønnsakssnacks. Snacksen er produsert av de beste råvarene og kan nytes med god samvittighet. Den blir å finne på REMA 1000 på Stranda.</p> -->
+
+<?- include ../partials/produkter.ejs ?>
 
 
 <div class="container-fluid between uc-bg" id="bet1">
 	<div class="filter filter-green"></div>
 </div>
 
-<div class="container part" id="omoss">
-
-	<h2 class="uc">Om oss</h2>
-
-
-	<div class="row">
-		<div class="col-sm-6 uc">
-
-
-			<p>Vi er fire elever fra entreprenørskap og tre elever fra matfag ved Stranda Videregåande Skule.</p>
-
-			<p><strong>Kristine Hanssen</strong> – leder</p>
-
-			<p><strong>Astrid Johanne Tryggestad Fjørstad</strong> – design og markedsansvarlig</p>
-
-			<p><strong>Johanne Tryggestad</strong> – økonomiansvarlig</p>
-
-			<p><strong>Odin Andreas Dyrkorn</strong> – IT-ansvarlig</p>
-
-			<p><strong>Sandra Therese Hjelle</strong> – sjefskokk</p>
-
-			<p><strong>Helga Kvamme</strong> – kokk</p>
-
-			<p><strong>Erik Høglund Viggehagen</strong> – kokk</p>
-
-
-		</div>
-		<div class="col-sm-6">
-			<img src="/img/folk.jpg" class="descriptive uc" />
-		</div>
-	</div>
-</div>
-
+<?- include ../partials/om-oss.ejs ?>
 
 <div class="container-fluid between uc-bg" id="bet2">
 	<div class="filter filter-orange"></div>
 </div>
 
-
-<div class="container part" id="kontakt">
-
-	<h2 class="uc">Kontakt oss</h2>
-
-
-	<div class="row">
-		<div class="col-sm-6 uc">
-
-
-			<p>Vi er fire elever fra entreprenørskap og tre elever fra matfag ved Stranda Videregåande Skule</p>
-
-		</div>
-		<div class="col-sm-6">
-			<div id="map"></div>
-			<div id="maptext">
-				<img src="/img/maptext.png" />
-			</div>
-		</div>
-	</div>
-</div>
+<?- include ../partials/kontakt.ejs ?>
