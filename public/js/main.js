@@ -14,26 +14,35 @@ $(document).ready(function(){
 			$('#skjema button').html("Sender"+Array(i+1).join("."));
 		}, 750);
 
-		$.post('send-mail',$('#skjema').serialize(),function(response){
+		var email = "larskarbo@hotmail.com";
+
+		$.ajax({
+			url: "//formspree.io/" + email, 
+			method: "POST",
+			data: $('#skjema').serialize(),
+			dataType: "json"
+		}).done(function(response) {
 			console.log('successfully posted request: ' + response);
-			finished();
+			finished('Melding sendt');
+			$('#skjema').find('*').val('');
+		})
+		.fail(function() {
+			finished('Kunne ikke sende epost. Vennligst send manuelt til ' + email);
 		});
 
-		setTimeout(function() {finished();}, 3000);
-
-		function finished(){
+		function finished(backt){
 			clearInterval(interval);
 			$('#skjema .questions').removeClass('loading');
-			$('#skjema').find('*').val('');
+			
 			$('#skjema button').html('Send');
-			$('#skjema .message').html('Melding sendt');
+			$('#skjema .message').html(backt);
 		}
 	})
 
 
 	slider.init($('#slider'), {
-		arrows: true,
-		autoplay: false,
+		arrows: false,
+		autoplay: true,
 		pauseOnHover: false
 	});
 
@@ -45,6 +54,8 @@ $(document).ready(function(){
 			arrows: true,
 			autoplay: false
 		});
+	}else{
+		$('#notSmall').hide();
 	};
 
 

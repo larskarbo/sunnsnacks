@@ -1,6 +1,6 @@
 <div id="hjem"></div>
 <div class="container" id="header">
-	<img class="uc" data-uc="logoImg" src="<?-logoImg?>" id="logo"/>
+	<img class="uc" data-uc="logoImg" src="<?-logoImg?>" data-width="400" id="logo"/>
 
 	<ul class="navigasjon" id="mainNav">
 		<li><a href="#hjem">Hjem</a></li>
@@ -10,7 +10,6 @@
 		<li><a href="#kontakt">Kontakt</a></li>
 	</ul>
 </div>
-
 
 <div class="container-fluid uc-bg" id="hero">
 	<div>
@@ -22,21 +21,44 @@
 
 
 
-<div class="container-fluid between uc-bg" id="bet1">
+<div class="container-fluid between uc-bg visible-sm-block visible-xs-block" id="bet1">
 	<div class="filter"></div>
+</div>
+
+<div class="container-fluid between uc-bg visible-md-block visible-lg-block">
+	<div class="filter filter-orange"></div>
 </div>
 
 <?- include ../partials/produkter.ejs ?>
 
 
-<div class="container-fluid between uc-bg" id="bet1">
+<div class="container-fluid between uc-bg">
 	<div class="filter filter-green"></div>
 </div>
 
 <?- include ../partials/om-oss.ejs ?>
 
-<div class="container-fluid between uc-bg" id="bet2">
+<div class="container-fluid between uc-bg">
 	<div class="filter filter-orange"></div>
 </div>
 
 <?- include ../partials/kontakt.ejs ?>
+
+<div class="container-fluid" id="footer">
+
+	<img class="uc" data-uc="logoImgFooter" src="<?-logoImgFooter?>" data-width="300" id="logoFooter"/>
+
+	<p></p>
+	<p>Nettsideansvarlig: Odin Dyrkorn</p>
+	<p class="grey">Design av Lars Karbø</p>
+</div>
+
+
+
+<div id="backgrounds" class="none">
+	<input type="hidden" src="/img/sunn1.jpg?w=1600">
+
+	<input type="hidden" src="/img/bord.jpg">
+	<input type="hidden" src="/img/folk.jpg">
+	<input type="hidden" src="/img/bordogplakatstripe.jpg">
+</div>

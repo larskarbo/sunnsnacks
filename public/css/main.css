@@ -55,14 +55,15 @@ p.focus {
 }
 
 #hero {
-	background: url(/img/sunn1.jpg?w=1600) center center /*fixed*/ #2B7369;
+	background: url(/img/w1600/sunn1.jpg) center center /*fixed*/ #2B7369;
 	background-size: cover;
 	height:400px;
 }
 
 .between {
 	background-size: cover;
-	background: center center fixed;
+	background: center center;
+	background-repeat: no-repeat;
 	height: 200px;
 	padding: 0;
 }
@@ -93,6 +94,9 @@ p.focus {
 #bet1 {
 	background-image: url(/img/bord.jpg);
 }
+#bet2 {
+
+}
 
 #folk {
 	background: url(/img/folk.jpg) center center /*fixed*/ #2B7369;
@@ -112,6 +116,14 @@ p.focus {
 	transition: -webkit-filter 2s ease-in-out;
 	-webkit-filter: hue-rotate(-70deg);
 }
+
+#logoFooter {
+	width: 100%;
+	max-width: 300px;
+	margin: auto;
+	display: block;
+}
+
 #slogan {
 	position: relative;
 	animation: show-fade-move 3s 1 ease-in-out;
@@ -161,6 +173,14 @@ h2 {
 	padding-bottom: 15px;
 }
 
+#footer {
+	background-color: #276911;#5DCF38;
+	height: 200px;
+	color:white;
+	padding-top: 50px;
+	text-align: center;
+}
+
 .descriptive {
 	width: 100%;
 }
@@ -199,6 +219,22 @@ h2 {
 	height: 100px;
 }
 
+#stranda {
+	position: absolute;
+	top:50%;
+	left: 50%;
+	width: 100px;
+	font-size: 24px;
+	margin-top: 0px;
+	margin-left: -65px;
+	overflow: hidden;
+	height: 100px;
+	display: none;
+}
+
+.grey {
+	color: #4DC126;
+}
 
 /* nav */
 

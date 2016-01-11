@@ -93,7 +93,8 @@ window.mapControl=(function(){
 			    container: container, // container id
 			    style: 'mapbox://styles/mapbox/streets-v8', //stylesheet location
 			    center: [ 6.925506591796875, 62.310708160426636], // starting position
-			    zoom: 5 // starting zoom
+			    zoom: 5, // starting zoom
+			    interactive: false
 			});
 
 
@@ -106,10 +107,9 @@ window.mapControl=(function(){
 					showMapText(function(){
 						fly(map);
 					});
-
-					$(mapContainer).on('mousedown touchdown',function(){
-						$('#maptext').hide();
-					})
+					setTimeout(function() {
+						$('#stranda').show(1000);
+					}, 6000);
 				})
 			});
 

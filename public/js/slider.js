@@ -7,7 +7,7 @@ window.slider=(function(){
 	//private
 	var options = {
 		controls: true,
-		duration: 5000,
+		duration: 4500,
 		hideControls: false,
 		showControlsHover: 2000,
 		arrows: true,
@@ -33,9 +33,9 @@ window.slider=(function(){
 
 		$(slides).first().addClass('current');
 
-		$(slider).append(options.prevArrow);
-		$(slider).append(options.nextArrow);
-		$(slider).append(options.pause);
+		$(slider).append(slider.options.prevArrow);
+		$(slider).append(slider.options.nextArrow);
+		$(slider).append(slider.options.pause);
 	}
 
 	function next(slider){
@@ -98,7 +98,7 @@ window.slider=(function(){
 		// next(slider);
 		interval = setInterval(function(){
 			next(slider);
-		}, options.duration);
+		}, slider.options.duration);
 	}
 
 	function arrowClickEvents (slider) {
@@ -122,29 +122,35 @@ window.slider=(function(){
 			});
 
 			$(slider).addClass('contentSlider');
-			$.extend(options, opt);
 
+			slider.options = JSON.parse(JSON.stringify(options));
+			$.extend(slider.options, opt);
 
-			$(slider).mouseenter(function(){
-				if(options.pauseOnHover)
+			if(slider.options.pauseOnHover){
+				$(slider).mouseenter(function(){
+
 					pause(this);
-			}).mouseleave(function(){
-				if(options.pauseOnHover){
+				}).mouseleave(function(){
+
 					start(this);
 					next(slider);
-				}
 
-				if(options.hideControls)
+				});
+			}
+
+			if(slider.options.hideControls){
+				$(slider).mouseleave(function(){
 					$(this).find('.slick-arrow').removeClass('show');
-			});
+				});
+			}
 
 			buildElement(slider, slides);
 
 
-			if(options.arrows)
+			if(slider.options.arrows)
 				$(slider).find('.slick-arrow').addClass('show');
 
-			if(options.hideControls){
+			if(slider.options.hideControls){
 				var timeout;
 				$(slider).mousemove(function(){
 					var $arrows = $(slider).find('.slick-arrow');
@@ -157,7 +163,7 @@ window.slider=(function(){
 						timeout = setTimeout(function() {
 
 							$arrows.removeClass('show');
-						}, options.showControlsHover);
+						}, slider.options.showControlsHover);
 					}
 				});
 			}
@@ -168,7 +174,7 @@ window.slider=(function(){
 
 			changeSlide(slider, 0)
 
-			if(options.autoplay)
+			if(slider.options.autoplay)
 				start(slider);
 		},
 
