@@ -8,11 +8,17 @@ module.exports = function(grunt) {
                 base: '../gen'
             },
             src: ['**']
+        },
+        gitadd: {
+            task: {
+                files: {
+                    src: ['*']
+                }
+            }
         }
     });
 
     grunt.loadNpmTasks('grunt-gh-pages');
-
-
+    grunt.loadNpmTasks('grunt-git');
 
 };
