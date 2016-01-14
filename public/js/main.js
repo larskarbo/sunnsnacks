@@ -14,7 +14,15 @@ $(document).ready(function(){
 			$('#skjema button').html("Sender"+Array(i+1).join("."));
 		}, 750);
 
-		var email = "larskarbo@hotmail.com";
+		var email;
+
+		var production = true;
+
+		if(production){
+			email = 'ub.sunnsnacks@gmail.com';
+		}else{
+			email = "larskarbo@hotmail.com";
+		}
 
 		$.ajax({
 			url: "//formspree.io/" + email, 
