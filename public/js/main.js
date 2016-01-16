@@ -16,7 +16,7 @@ $(document).ready(function(){
 
 		var email;
 
-		var production = true;
+		var production = false;
 
 		if(production){
 			email = 'ub.sunnsnacks@gmail.com';

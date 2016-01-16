@@ -1,20 +1,22 @@
 <div class="container part" id="kontakt">
 
-	<h2 class="uc">Kontakt oss</h2>
+	<h2 class="uc" data-uc="kontakt"><?= kontakt ?></h2>
 
 
 	<div class="row">
-		<div class="col-sm-6 uc">
-			<p>Vi er fire elever fra entreprenørskap og tre elever fra matfag ved Stranda Videregåande Skule</p>
+		<div class="col-sm-6">
+			<div class="uc" data-uc="kontaktText">
+				<?- kontaktText ?>
+			</div>
 
 			<form class="lars" id="skjema">
 				<div class="questions">
 					<div class="row">
-						<div class="col-xs-6 uc">
+						<div class="col-xs-6">
 							<label for="name">Navn: </label>
 							<input type="text" id="name" required>
 						</div>
-						<div class="col-xs-6 uc">
+						<div class="col-xs-6">
 							<label for="email">E-post: </label>
 							<input type="e-mail" id="email" required>
 						</div>
