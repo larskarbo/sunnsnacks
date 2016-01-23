@@ -66,6 +66,7 @@ done
 
 echo
 
+
 # Update
 #echo "Updating app with npm install"
 #cd ${DEPLOY_ROOT}
