@@ -55,7 +55,7 @@ p.focus {
 }
 
 #hero {
-	background: url(/img/w1600/sunn1.jpg) center center /*fixed*/ #2B7369;
+	background: url(/img/sunn1.jpg?width=1600) center center /*fixed*/ #2B7369;
 	background-size: cover;
 	height:400px;
 }
