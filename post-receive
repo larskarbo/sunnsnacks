@@ -75,7 +75,7 @@ git pull
 npm install
 echo
 
-# Start forever process
+# Start forever process 
 echo "Starting forever process at ${DEPLOY_ROOT_MOTHER}/script.js"
 sudo forever start ${DEPLOY_ROOT_MOTHER}/script.js
 echo
