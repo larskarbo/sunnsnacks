@@ -25,7 +25,7 @@ $(document).ready(function(){
 		}
 
 		$.ajax({
-			url: "//formspree.io/" + email, 
+			url: "postvesen", 
 			method: "POST",
 			data: $('#skjema').serialize(),
 			dataType: "json"
