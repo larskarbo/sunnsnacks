@@ -55,7 +55,7 @@ p.focus {
 }
 
 #hero {
-	background: url(/img/sunn1.jpg?width=1600) center center /*fixed*/ #2B7369;
+	background: url(/img/sunn1.jpg?width=800) center center /*fixed*/ #E7E7E7;
 	background-size: cover;
 	height:400px;
 }
@@ -126,19 +126,22 @@ p.focus {
 
 #slogan {
 	position: relative;
-	animation: show-fade-move 3s 1 ease-in-out;
+	animation: fade-in-up 3s;
 }
 
-@keyframes show-fade-move {
-  0%   {
-  	opacity: 0;
-  	top:40px;
-  }
-  100% {
-  	top:0px;
-  	opacity: 1;
-  }
+@keyframes fade-in-up {
+    0% {
+        opacity: 0;
+        -webkit-transform: translateY(20px);
+        transform: translateY(20px);
+    }
+    100% {
+        opacity: 1;
+        -webkit-transform: translateY(0);
+        transform: translateY(0);
+    }
 }
+
 
 
 h1.hero {
