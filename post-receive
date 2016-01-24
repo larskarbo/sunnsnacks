@@ -21,8 +21,9 @@ echo "githook: $(date): Welcome to '$(hostname -f)' (${IP})"
 echo
 
 # Stop node server
-echo "Stopping node server"
-forever stopall
+echo "Stopping forever process"
+cd {DEPLOY_ROOT_MOTHER}
+forever stop script.js
 echo
 
 # Make sure directory exists. Maybe its deployed for the first time.
@@ -67,16 +68,17 @@ done
 echo
 
 
-# Update
-#echo "Updating app with npm install"
-#cd ${DEPLOY_ROOT}
-#npm install
-#echo
+# Update mother
+echo "Updating mother: 1. git pull 2. npm install"
+cd ${DEPLOY_ROOT_MOTHER}
+git pull
+npm install
+echo
 
-# Start node server
-#echo "Starting node server at ${DEPLOY_ROOT}/script.js"
-#sudo forever start ${DEPLOY_ROOT}/script.js
-#echo
+# Start forever process
+echo "Starting forever process at ${DEPLOY_ROOT_MOTHER}/script.js"
+sudo forever start ${DEPLOY_ROOT_MOTHER}/script.js
+echo
 
 echo "$(date): See you soon at '$(hostname -f)' (${IP})"
 exit 0
