@@ -22,7 +22,7 @@ echo
 
 # Stop node server
 echo "Stopping forever process"
-cd {DEPLOY_ROOT_MOTHER}
+cd ${DEPLOY_ROOT_MOTHER}
 forever stop script.js
 echo
 
@@ -77,7 +77,8 @@ echo
 
 # Start forever process 
 echo "Starting forever process at ${DEPLOY_ROOT_MOTHER}/script.js"
-sudo forever start ${DEPLOY_ROOT_MOTHER}/script.js
+cd ${DEPLOY_ROOT_MOTHER}
+forever start script.js
 echo
 
 echo "$(date): See you soon at '$(hostname -f)' (${IP})"
