@@ -66,6 +66,8 @@ p.focus {
 	background-repeat: no-repeat;
 	height: 200px;
 	padding: 0;
+	background-color:#98B582;
+	
 }
 
 .popup-outer{
@@ -89,6 +91,24 @@ p.focus {
 	margin:0 auto;
 	border: solid 1px gray;
 	text-align: center;
+}
+
+.muchWidth {
+	padding:0 25px;
+}
+
+.quote {
+	font-size: 60px;
+	text-align: center;
+	padding-top:35px;
+	color: black ;
+}
+
+.ingress {
+	max-width: 500px;
+	text-align: center;
+	margin: 20px auto 20px;
+	font-size: 18px;
 }
 
 #bet1 {

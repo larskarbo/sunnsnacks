@@ -24,14 +24,16 @@ $(document).ready(function(){
 			email = "larskarbo@hotmail.com";
 		}
 
+		var data = $('#skjema').serializeArray();
+		console.log(data);
 		$.ajax({
 			url: "postvesen", 
 			method: "POST",
-			data: $('#skjema').serialize(),
-			dataType: "json"
+			data: data
 		}).done(function(response) {
 			console.log('successfully posted request: ' + response);
 			finished('Melding sendt');
+			console.log(response);
 			$('#skjema').find('*').val('');
 		})
 		.fail(function() {

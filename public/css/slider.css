@@ -2,6 +2,7 @@
     height: 350px;
     overflow: hidden;
     position: relative;
+    margin:20px 0;
 }
 
 /*@media only screen and (max-width: 500px) {
